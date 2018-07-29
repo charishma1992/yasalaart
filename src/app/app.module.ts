@@ -61,6 +61,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
       { path: 'register', component: RegisterComponent },
       { path: 'news', component: NewsComponent },
       { path: 'aboutus', component: AboutusComponent },
+      { path: 'contactus', component: ContactusComponent },
       {path:'',component:HomeComponent}
     ]),
     
