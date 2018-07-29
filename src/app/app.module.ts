@@ -23,12 +23,14 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
 
+import { ExhibitionComponent } from './exhibition/exhibition.component';
 import { NewsComponent } from './news/news.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ExhibitionComponent,
     NewsComponent,
     RegisterComponent,
     TopnavComponent,
@@ -62,6 +64,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
       { path: 'news', component: NewsComponent },
       { path: 'aboutus', component: AboutusComponent },
       { path: 'contactus', component: ContactusComponent },
+      { path: 'exhibition', component: ExhibitionComponent },
       {path:'',component:HomeComponent}
     ]),
     
