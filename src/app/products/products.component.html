@@ -1,0 +1,235 @@
+<!--
+
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+
+    <div class="col" style="height:50em;width:20%;margin-top:-1em ; float:left;background-color:gainsboro;border:3px;border-color: black">
+        <button class="w3-bar-item w3-button w3-large" (click)="close()">Close</button>
+        <h3>Filters:</h3>
+        <hr>
+
+        <div class="form-group">
+            <label for="catogery">Catogery:</label>
+            <select class="form-control" style="height:35px;" [(ngModel)]="catogeryDetails.catogery_id" (change)="chooseCatogery(catogeryDetails.catogery_id)">
+
+                <option value="">Select Catogery</option>
+                <option value="{{c.id}}" *ngFor="let c of catogeryList">{{c.name}}</option>
+
+
+            </select>
+        </div>
+        <hr>
+
+        <label for="catogery_id">Catogery:</label>
+        <ul class="list-group">
+
+            <li class="list-group-item" (click)=chooseCatogery(catogeryDetails.traditional)>
+                Traditional
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Women)>
+                Women
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.VillageMen)>
+                Village Men
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Festivals)>
+                Festivals
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Farming)>
+                Farming
+
+            </li>
+            <li class="list-group-item" (click)=chooseCatogery(catogeryDetails.ALL)>
+                ALL
+
+            </li>
+        </ul>
+
+
+        <hr>
+         MULTIPLE CHECKBOXES 
+        <label>Select Price range:</label>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors" (change)=choosePrice(priceDetails.high)> 100000-above
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors"> 50000-100000
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors"> below 50000
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors" checked="checked"> No Range
+            </label>
+        </div>
+        <label>Select Color:</label>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors" ng-model="formData.colors.red"> Red
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors" ng-model="formData.colors.blue"> Blue
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="favoriteColors" ng-model="formData.colors.green"> Green
+            </label>
+        </div>
+    </div>
+
+       <button class="w3-button w3-white w3-xxlarge" (click)="open()">&#9776;</button>
+</div>  
+<div>
+ 
+
+    <div class="container mt-3">
+
+        <h1>Paintings</h1>
+
+        <div class="row" style="width: 85%; float:right;">
+
+            <div class="col-md-3 col-sm-6" style="padding-bottom: 15px;" *ngFor="let p of _catlogList">
+                <div class="card text-center">
+                    <div class="card-block" style="padding:10px">
+                        <img src="{{p.img}}" class="img-fluid" style="height:200px;width:100%">
+                        <div class="card-title">
+
+                            <h4>{{p.productName}}</h4>
+                        </div>
+                        <div class="card-subtitle">
+
+                            <p> {{p.price}}</p>
+
+
+                        </div>
+
+
+
+
+                        <a class="btn btn-success" href="http://localhost:4200/productdescription" role="button" (click)="fetchProductDetails(p.img_id)">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+<!--
+<div class="wrapper">
+   
+
+    <nav id="sidebar" style="position:absolute;top:11.5%;color:black">
+
+        <label for="catogery_id">Catogery:</label>
+        <ul class="list-group">
+
+            <li class="list-group-item" (click)=chooseCatogery(catogeryDetails.traditional)>
+                Traditional
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Women)>
+                Women
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.VillageMen)>
+                Village Men
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Festivals)>
+                Festivals
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" (click)=chooseCatogery(catogeryDetails.Farming)>
+                Farming
+
+            </li>
+            <li class="list-group-item" (click)=chooseCatogery(catogeryDetails.ALL)>
+                ALL
+
+            </li>
+        </ul>
+
+    </nav>-->
+
+<!-- Page Content Holder -->
+<head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+      </head>
+<body>
+    <div class="container" style="position:relative;left:10px;top:70px;color:white;">
+
+            <h1 style="text-align:center">Paintings</h1>
+
+
+        <hr>
+        <div style="position:relative;left:30%;">
+            <button type="button" class="btn btn-outline-secondary active" (click)=chooseCatogery(catogeryDetails.ALL)>
+                <span style="color:white">All</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.traditional)>
+                <span style="color:white">Traditional</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Farming)>
+                <span style="color:white">Farming</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Festivals)>
+                <span style="color:white">Festivals</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.VillageMen)>
+                <span style="color:white">Village Men</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Women)>
+                <span style="color:white">Women</span>
+            </button>
+
+        </div>
+        <hr>
+        <div>
+            <div class="col-md-3 col-sm-6" style="padding-bottom: 15px;color:black" *ngFor="let p of _catlogList">
+                <a href="http://localhost:4200/productdescription" (click)="fetchProductDetails(p.img_id)">
+                    <div class="card text-center">
+                        <div class="card-block" style="padding:10px">
+                            <img src="{{p.img}}" class="img-fluid" style="height:200px;width:100%">
+                            <div class="card-title">
+
+                                <h4>{{p.productName}}</h4>
+                            </div>
+                            <div class="card-subtitle">
+
+                                <!--  <p>{{ p.price | currency:'INR' }}</p>-->
+
+
+                            </div>
+
+
+
+
+                            <a class="btn btn-success" href="http://localhost:4200/productdescription" role="button" (click)="fetchProductDetails(p.img_id)">Quick View</a>
+                        </div>
+                    </div>
+                    </a>
+            </div>
+
+        </div>
+    </div>
+</body>

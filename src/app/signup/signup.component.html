@@ -1,0 +1,141 @@
+
+  
+    <div class="col-md-6 offset-md-3" >     
+      
+  <h2 style="text-align: center">Register here</h2>
+    
+  <!--<app-textbox [textBox]="userDetails.firstName"></app-textbox>
+  <app-textbox [textBox]="userDetails.lastName"></app-textbox>
+  <app-textbox [textBox]="userDetails.email"></app-textbox>
+  <app-textbox [textBox]="userDetails.password"></app-textbox>
+  <app-textbox [textBox]="userDetails.confirmPassword"></app-textbox>
+  <app-textbox [textBox]="userDetails.mobile"></app-textbox> -->
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="firstName" class="form-control" id="firstName" dirty placeholder="First Name" name="firstName" #firstName="ngModel"
+    [(ngModel)]="userDetails.firstName" required minlength="2" maxlength="20" [pattern]="nameRegex">
+    <span class="text-danger" *ngIf="firstName.errors?.required">
+        {{validation.FIRSTNAME_REQUIRED}}
+      </span>
+      <span class="text-danger" *ngIf="firstName.errors?.minlength">
+        {{validation.FIRSTNAME_MINLENGTH}}
+      </span>
+      <span class="text-danger" *ngIf="firstName.errors?.maxlength">
+        {{validation.FIRSTNAME_MAXLENGTH}}
+      </span>
+      <span class="text-danger" *ngIf="firstName.errors?.pattern">
+          {{validation.NAME_PATTERN}}
+        </span>
+    </div>
+    <div class="form-group">
+    <label for="LastName">Last Name:</label>
+    <input type="LastName" class="form-control" id="lastName" placeholder="Last Name" [(ngModel)]="userDetails.lastName" name="LastName" #lastName="ngModel"
+    required minlength="2" maxlength="20" [pattern]="nameRegex">
+    <span class="text-danger" *ngIf="lastName.errors?.required">
+        {{validation.LASTNAME_REQUIRED}}
+      </span>
+      <span class="text-danger" *ngIf="lastName.errors?.minlength">
+        {{validation.LASTNAME_MINLENGTH}}
+      </span>
+      <span class="text-danger" *ngIf="lastName.errors?.maxlength">
+        {{validation.LASTNAME_MAXLENGTH}}
+      </span>
+      <span class="text-danger" *ngIf="lastName.errors?.pattern">
+          {{validation.NAME_PATTERN}}
+        </span>
+    </div>
+    <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="email" name="email" [(ngModel)]="userDetails.email">
+    </div>
+    <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="password" 
+    name="pwd" [(ngModel)]="userDetails.password">
+    </div>
+    <div class="form-group">
+    <label for="confirmPwd">confirm Password:</label>
+    <input type="password" class="form-control" id="cpwd" placeholder="confirm password" name="confirmPwd" [(ngModel)]="userDetails.confirmPassword"> 
+    </div>
+  
+  
+  
+    <div class="form-group">
+    <label for="mobile">Mobile:</label>
+    <input type="mobile" class="form-control" id="mobile" placeholder="Mobile No." 
+    name="Mobile" [(ngModel)]="userDetails.mobile">
+    </div>
+  
+   
+    
+
+    
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <select class="form-control" style="height:35px;"  id="country"
+        [(ngModel)]="userDetails.country" (change)="changeCountry()">
+              
+            <option value="">Please Select</option>
+            <option value="{{c.id}}" *ngFor="let c of countryList">{{c.name}}</option>
+    
+            
+            </select>
+    
+    </div>
+    
+    <div class="form-group">
+        <label for="state">State:</label>
+        <select class="form-control"  id="state" style="height:35px;" >
+
+            <option value="">Please Select</option>
+            <option *ngFor="let s of filteredstateslist">{{s.name}}</option>
+    
+            <!--<option *ngFor="let c of countryList" value="{{c.value}}">{{c.text}}</option>-->
+            </select>
+    
+    </div>
+    
+    
+  
+  
+    <div class="checkbox">
+    <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default" (click)="signup()" >Submit</button>
+    {{userDetails|json}}
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--  
+  
+  
+  
+  
+  -->

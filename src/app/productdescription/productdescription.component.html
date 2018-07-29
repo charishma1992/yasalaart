@@ -1,0 +1,73 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9"  style="width:40%;height:40%;position:absolute;top:120px;left:10px;" *ngFor="let p of filteredproductList">
+            <img src="{{p.img}}" style="  border-style: solid;
+            border-color: coral;border:3em" [imageZoom]="zoomedImageSrc" [lensWidth]="800" [lensHeight]="475" class="img-fluid" style="height:180%;width:200%">
+            
+            
+            
+           
+      </div>
+      <div class="col-sm-9"  style="width:55%;position:absolute;top:120px;right:10px" *ngFor="let p of filteredproductList">
+            
+            
+            <h2>{{p.productName}}</h2>
+                 
+            <p>{{p.description}}</p>
+        <!--  <p>Price:{{p.price}}</p> -->
+          <p>Size:{{p.size}}</p>
+          
+          <p>{{p.description}}</p>
+           <p>Quantity: <a class="btn btn-success" role="button" (click)=addToCart(p)>+</a>{{p.quantity}} 
+            <a class="btn btn-success" role="button" (click)=removeFromCart(p)>-</a> </p>
+           
+          <a class="btn btn-danger" role="button" (click)=addProduct(p)>Add to Cart</a>   
+          <h5 style="color:red;">{{message}}</h5>                
+      </div>
+    </div>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
