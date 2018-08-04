@@ -111,6 +111,7 @@ selectedProductDetailsList:Array<any>;
     
   
 fetchProductDetails(img){
+  
   console.info("image ID:",img);
   localStorage.setItem('imgID',img);
   console.info('productList:',this.productList);

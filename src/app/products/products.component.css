@@ -8,8 +8,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: black;
-    
-    background-image:url("/assets/background-productspage/white.jpg");
+   
+    background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/assets/background-productspage/orange.jpg");
     background-repeat: repeat;
     background-position: center;
     height:310vh;

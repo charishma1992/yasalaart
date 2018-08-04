@@ -176,61 +176,62 @@
         
       </head>
 <body>
-    <div class="container" style="position:relative;left:10px;top:70px;color:black;">
+        <div class="container" style="position:relative;top:70px;color:black;">
 
-            <h1 style="text-align:center">Paintings</h1>
-
-
-        <hr>
-       
-        <div  class="container" style="position:relative;left:30%;">
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.ALL)>
-                <span style="color:black">All</span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.traditional)>
-                <span style="color:black">Traditional</span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Farming)>
-                <span style="color:black">Farming</span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Festivals)>
-                <span style="color:black">Festivals</span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.VillageMen)>
-                <span style="color:black">Village Men</span>
-            </button>
-            <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Women)>
-                <span style="color:black">Women</span>
-            </button>
-
-        </div>
-        <hr>
-        <div>
-            <div class="col-md-3 col-sm-6" style="padding-bottom: 15px;color:black" *ngFor="let p of _catlogList">
-                <a href="http://localhost:4200/productdescription" (click)="fetchProductDetails(p.img_id)">
-                    <div class="card text-center">
-                        <div class="card-block" style="padding:10px">
-                            <img src="{{p.img}}" class="img-fluid" style="height:200px;width:100%">
-                            <div class="card-title">
-
-                                <h4>{{p.productName}}</h4>
+                <h1 style="text-align:center">Paintings</h1>
+    
+    
+            <hr>
+           
+            <div  class="container" style="text-align:center">
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.ALL)>
+                        <span style="color:black">All</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.traditional)>
+                        <span style="color:black">Traditional</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Farming)>
+                        <span style="color:black">Farming</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Festivals)>
+                        <span style="color:black">Festivals</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.VillageMen)>
+                        <span style="color:black">Village Men</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" (click)=chooseCatogery(catogeryDetails.Women)>
+                        <span style="color:black">Women</span>
+                    </button>
+        
+                </div>
+            <hr>
+            <div>
+                <div class="col-md-3 col-sm-6" style="padding-bottom: 15px;color:black" *ngFor="let p of _catlogList">
+                    <a  href="/productdescription" (click)="fetchProductDetails(p.img_id)">
+                        <div class="card text-center">
+                            <div class="card-block" style="padding:10px">
+                                <img src="{{p.img}}" class="img-fluid" style="height:200px;width:100%">
+                                <div class="card-title">
+    
+                                    <h4>{{p.productName}}</h4>
+                                </div>
+                                <div class="card-subtitle">
+    
+                                    <!--  <p>{{ p.price | currency:'INR' }}</p>-->
+    
+    
+                                </div>
+    
+    
+    
+    
+                                <a class="btn btn-success"  role="button"
+                                 href="/productdescription" (click)="fetchProductDetails(p.img_id)">Quick View</a>
                             </div>
-                            <div class="card-subtitle">
-
-                                <!--  <p>{{ p.price | currency:'INR' }}</p>-->
-
-
-                            </div>
-
-
-
-
-                            <a class="btn btn-success" href="http://localhost:4200/productdescription" role="button" (click)="fetchProductDetails(p.img_id)">Quick View</a>
                         </div>
-                    </div>
-                    </a>
+                        </a>
+                </div>
+    
             </div>
-
         </div>
-    </div>
 </body>

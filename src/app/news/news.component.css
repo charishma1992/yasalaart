@@ -1,7 +1,7 @@
 body {
     width: 100%;
     height:100vh;
-    background-image:url("/assets/background-productspage/black.jpg");
+    background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/assets/background-productspage/orange.jpg");
     background-repeat: no-repeat;
     background-position: center;
     
